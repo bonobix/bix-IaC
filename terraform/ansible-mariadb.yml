@@ -1,0 +1,17 @@
+#playbook per deploy di mariadb
+
+- name: Deploy MariaDB container
+  community.docker.docker_container:
+    name: mariadb
+    image: mariadb:11
+    state: started
+    restart_policy: always
+    environment:
+      MYSQL_ROOT_PASSWORD: gold
+      MYSQL_DATABASE: dungeon
+      MYSQL_USER: goblin
+      MYSQL_PASSWORD: treasure
+    volumes:
+      - mariadb_data:/var/lib/mysql
+    published_ports:
+      - "3306:3306"
