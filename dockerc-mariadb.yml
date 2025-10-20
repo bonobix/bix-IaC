@@ -1,4 +1,7 @@
-#IaC con docker compose per far girare mariadb, si puo adattare a seconda dei bisogni 
+#IaC con docker compose per far girare mariadb, si puo adattare a seconda dei bisogni.
+#	•	Qui dichiari lo stato desiderato: l’immagine, le variabili, i volumi.
+#	•	Puoi versionarlo in Git e rifare il deploy sempre nello stesso modo.
+
 version: "3.9"
 services:
   mariadb:
